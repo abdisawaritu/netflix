@@ -1,7 +1,9 @@
 import "./App.css";
 import Banner from "./components/Banner/Banner";
+import DisplayRow from "./components/DisplayRow/DisplayRow";
+
 import Header from "./components/Header/Header";
-import MovieCard from "./components/MovieCard/MovieCard";
+
 // import TestOne from './components/Test/TestOne'
 // import TestTwo from './components/Test/TestTwo'
 function App() {
@@ -12,7 +14,7 @@ function App() {
 
       <Header />
       <Banner />
-      <MovieCard/>
+      <DisplayRow />
     </>
   );
 }

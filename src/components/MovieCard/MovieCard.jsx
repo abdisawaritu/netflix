@@ -3,6 +3,7 @@ import { FaCirclePlay } from "react-icons/fa6";
 import { BsPlusCircle } from "react-icons/bs";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 function MovieCard({ movie }) {
   let genres = ["Adventure", " Action", "Thriller"];
@@ -11,7 +12,7 @@ function MovieCard({ movie }) {
       {/* poster image */}
       <img
         className={styles.poster}
-        src={movie.poster_path}
+        src= {`${IMAGE_BASE_URL}${movie?.poster_path}`}
         alt=" Poste image"
       />
 
@@ -20,7 +21,7 @@ function MovieCard({ movie }) {
         {/* img */}
         <img
           className={styles.hoverImage}
-          src={movie.poster_path}
+          src= {`${IMAGE_BASE_URL}${movie?.poster_path}`}
           alt="hover image"
         />
         {/* badge */}
