@@ -4,42 +4,68 @@ import { BsPlusCircle } from "react-icons/bs";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
-function MovieCard({movie}) {
+function MovieCard() {
   let genres = ["Adventure", " Action", "Thriller"];
   return (
-    <div className= {styles.cardWrapper} >
+    <div className={styles.cardWrapper}>
       {/* poster image */}
-      <img className={styles.poster} src={movie.poster_path} alt=" Poste image" />
+      <img
+        className={styles.poster}
+        // src={movie.poster_path}
+        alt=" Poste image"
+      />
 
       {/* hover card */}
-      <div className={styles.hoverCard} >
+      <div className={styles.hoverCard}>
         {/* img */}
-        <img src={movie.poster_path} alt="hover image" />
+        <img
+          className={styles.hoverImage}
+          // src={movie.poster_path}
+          alt="hover image"
+        />
         {/* badge */}
-        <div className= {styles.badge} >Recently added</div>
+        <div className={styles.badge}>Recently added</div>
         {/* button row */}
 
-        <div className={styles.buttonsRow} >
-          <FaCirclePlay color="white" size={40} />
-          <BsPlusCircle color="white" size={40} />
-          <GoCheckCircleFill color="white" size={40} />
-          <IoIosArrowDropdownCircle color="white" size={40} />
-          <IoIosArrowDropdownCircle className={ } color="white" size={40} />
+        <div className={styles.buttonsRow}>
+          <FaCirclePlay
+            className={styles.circleButton}
+            color="white"
+            size={40}
+          />
+          <BsPlusCircle
+            className={styles.circleButton}
+            color="white"
+            size={40}
+          />
+          <GoCheckCircleFill
+            className={styles.circleButton}
+            color="white"
+            size={40}
+          />
+
+          <IoIosArrowDropdownCircle
+            color="white"
+            size={40}
+            className={styles.circleButtonSmall}
+          />
         </div>
 
         {/* meta data  */}
-        <div className={styles.metaRow} >
-          <span>U/A 16+</span>
-          <span>Movie</span>
-          <span>HD</span>
+        <div className={styles.metaRow}>
+          <span className={styles.tag}>U/A 16+</span>
+          <span className={styles.tag}>Movie</span>
+          <span className={styles.tag}>HD</span>
         </div>
         {/* genres */}
-        <div className= {stycle.growth} >
+        <div className={styles.genres}>
           {genres?.map((g, index) => {
             return (
               <span key={index}>
                 {g}
-                {index < genres.length - 1 && <span className={styles.dot} >• </span>}
+                {index < genres.length - 1 && (
+                  <span className={styles.dot}>• </span>
+                )}
               </span>
             );
           })}
