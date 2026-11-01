@@ -1,6 +1,7 @@
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import DisplayRow from "./components/DisplayRow/DisplayRow";
+import Footer from "./components/Footer/Footer";
 
 import Header from "./components/Header/Header";
 
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <Banner />
       <DisplayRow />
+      <Footer/>
     </>
   );
 }
